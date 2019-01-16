@@ -27,7 +27,7 @@
         makeLabelsClickable();
     }
 
-    /** === FUNCTIONS === **/
+    /** Functions **/
 
     /**
      * Add IDs to the checkboxes, and then set the label's FOR attribute to allow clicking on the labels
