@@ -1,3 +1,6 @@
+## 0.2.0
+Add ? to go to search bar
+
 ## 0.1.3
 Fix copypasta error
 

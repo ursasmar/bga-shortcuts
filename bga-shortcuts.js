@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       BGA Shortcuts
 // @namespace  BGA Shortcuts
-// @version    0.1.3
+// @version    0.2.0
 // @description  Keyboard shortcuts for the Atlas
 // @include     http://*.boardgameatlas.*/*
 // @include     http://boardgameatlas.*/*
@@ -13,6 +13,7 @@
 /*
  * CHANGLOG::
  * ============================================
+ * 0.2.0 - Add / to jump to search
  * 0.1.3 - Fix copypasta error
  * 0.1.2 - Adding a changelog
  * 0.1.1 - Auto run the main function
@@ -22,6 +23,25 @@
 (function () {
     "use strict";
     console.log('Loaded BGA Shortcuts');
+
+    /** Keyboard Shortcuts **/
+    document.body.addEventListener('keydown', function (e) {
+        let active = document.activeElement.tagName.toLowerCase(),
+            badElements = ['input', 'textarea', 'select'];
+
+        // ignore shortcuts if we are in some form of input
+        if (badElements.indexOf(active) === -1) {
+            // Search box jump /
+            if (e.key === '?') {
+                let searchbox = document.querySelector('#bg-search');
+                document.body.scrollTop = 0;
+                searchbox.focus();
+                window.setTimeout(function () {
+                    searchbox.value = '';
+                }, 10);
+            }
+        }
+    });
 
     /**
      * If we are on the edit page, do some things
