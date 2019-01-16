@@ -1,3 +1,6 @@
+## 0.1.3
+Fix copypasta error
+
 ## 0.1.2
 Add changelog
 
