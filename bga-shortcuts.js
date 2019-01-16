@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       BGA Shortcuts
 // @namespace  BGA Shortcuts
-// @version    0.1.1
+// @version    0.1.2
 // @description  Keyboard shortcuts for the Atlas
 // @include     http://*.boardgameatlas.*/*
 // @include     http://boardgameatlas.*/*
@@ -13,6 +13,7 @@
 /*
  * CHANGLOG::
  * ============================================
+ * 0.1.2 - Adding a changelog
  * 0.1.1 - Auto run the main function
  * 0.1.0 - First version
  */
