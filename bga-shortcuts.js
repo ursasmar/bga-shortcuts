@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       BGA Shortcuts
 // @namespace  BGA Shortcuts
-// @version    0.2.0
+// @version    0.2.1
 // @description  Keyboard shortcuts for the Atlas
 // @include     http://*.boardgameatlas.*/*
 // @include     http://boardgameatlas.*/*
@@ -13,6 +13,7 @@
 /*
  * CHANGLOG::
  * ============================================
+ * 0.2.1 - Change how the focus works
  * 0.2.0 - Add / to jump to search
  * 0.1.3 - Fix copypasta error
  * 0.1.2 - Adding a changelog
@@ -35,9 +36,9 @@
             if (e.key === '?') {
                 let searchbox = document.querySelector('#bg-search');
                 document.body.scrollTop = 0;
-                searchbox.focus();
                 window.setTimeout(function () {
                     searchbox.value = '';
+                    searchbox.focus();
                 }, 10);
             }
         }

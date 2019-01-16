@@ -1,3 +1,6 @@
+##0.2.1
+Fix the focus on search box
+
 ## 0.2.0
 Add ? to go to search bar
 
